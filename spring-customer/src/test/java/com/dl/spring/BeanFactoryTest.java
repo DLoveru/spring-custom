@@ -1,21 +1,20 @@
 package com.dl.spring;
 
+import com.dl.spring.factory.AutowireCapableBeanFactory;
+import com.dl.spring.factory.BeanFactory;
+
 /**
  * @author Jalen.Deng
  * @description
- * @date 2020/11/23 20:51
+ * @date 2020/11/23 21:50
  **/
 public class BeanFactoryTest {
     public static void main(String[] args) {
-        //初始化beanFactory
-        BeanFactory beanFactory = new BeanFactory();
-        //创建bean实例
-        BeanDefinition helloWorldServiceBean = new BeanDefinition(new HelloWorldService());
-        //注册bean实例到beanFactory
-        beanFactory.registerBeanDefinition("helloWorldService",helloWorldServiceBean);
-        //通过getBean()方法获取bean实例
+        BeanFactory beanFactory = new AutowireCapableBeanFactory();
+        BeanDefinition beanDefinition = new BeanDefinition();
+        beanDefinition.setBeanClassName("com.dl.spring.HelloWorldService");
+        beanFactory.registerBeanDefinition("helloWorldService",beanDefinition);
         HelloWorldService helloWorldService = (HelloWorldService) beanFactory.getBean("helloWorldService");
-        //调用hello方法
         helloWorldService.helloWorld();
     }
 }
