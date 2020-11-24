@@ -15,7 +15,7 @@ public class BeanFactoryTest {
         BeanDefinition beanDefinition = new BeanDefinition();
         beanDefinition.setBeanClassName("com.dl.spring.HelloWorldService");
         PropertyValues propertyValues = new PropertyValues();
-        //为bean注入属性
+        //为bean注入属性，name为HelloWorldService定义的属性
         propertyValues.addPropertyValue(new PropertyValue("name","jalen"));
         beanDefinition.setPropertyValues(propertyValues);
         //生成bean
