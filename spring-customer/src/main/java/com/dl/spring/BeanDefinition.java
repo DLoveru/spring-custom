@@ -2,7 +2,7 @@ package com.dl.spring;
 
 /**
  * @author Jalen.Deng
- * @description bean定义，可以理解为层层包装后的bean。
+ * @description bean的内容及元数据，保存在BeanFactory中，包装bean的实体
  * @date 2020/11/23 20:46
  **/
 public class BeanDefinition {
@@ -11,6 +11,8 @@ public class BeanDefinition {
     private Class beanClass;
 
     private String beanClassName;
+
+    private PropertyValues propertyValues;
 
     public BeanDefinition() {
     }
@@ -42,5 +44,13 @@ public class BeanDefinition {
 
     public Object getBean() {
         return bean;
+    }
+
+    public PropertyValues getPropertyValues() {
+        return propertyValues;
+    }
+
+    public void setPropertyValues(PropertyValues propertyValues) {
+        this.propertyValues = propertyValues;
     }
 }
