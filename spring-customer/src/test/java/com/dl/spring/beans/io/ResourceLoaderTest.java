@@ -1,4 +1,4 @@
-package com.dl.spring.io;
+package com.dl.spring.beans.io;
 
 import org.junit.Assert;
 import org.junit.Test;

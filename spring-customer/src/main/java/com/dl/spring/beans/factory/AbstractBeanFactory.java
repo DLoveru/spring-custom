@@ -1,6 +1,6 @@
-package com.dl.spring.factory;
+package com.dl.spring.beans.factory;
 
-import com.dl.spring.BeanDefinition;
+import com.dl.spring.beans.BeanDefinition;
 
 import java.util.ArrayList;
 import java.util.Iterator;

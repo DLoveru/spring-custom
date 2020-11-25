@@ -1,12 +1,10 @@
-package com.dl.spring.xml;
+package com.dl.spring.beans.xml;
 
-import com.dl.spring.AbstractBeanDefinitionReader;
-import com.dl.spring.BeanDefinition;
+import com.dl.spring.beans.AbstractBeanDefinitionReader;
+import com.dl.spring.beans.BeanDefinition;
 import com.dl.spring.BeanReference;
-import com.dl.spring.PropertyValue;
-import com.dl.spring.io.Resource;
-import com.dl.spring.io.ResourceLoader;
-import com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl;
+import com.dl.spring.beans.PropertyValue;
+import com.dl.spring.beans.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

@@ -1,9 +1,4 @@
-package com.dl.spring.factory;
-
-import com.dl.spring.BeanDefinition;
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+package com.dl.spring.beans.factory;
 
 /**
  * @author Jalen.Deng

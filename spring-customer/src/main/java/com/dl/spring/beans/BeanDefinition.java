@@ -1,4 +1,4 @@
-package com.dl.spring;
+package com.dl.spring.beans;
 
 /**
  * @author Jalen.Deng

@@ -1,10 +1,10 @@
 package com.dl.spring;
 
-import com.dl.spring.factory.AbstractBeanFactory;
-import com.dl.spring.factory.AutowireCapableBeanFactory;
-import com.dl.spring.factory.BeanFactory;
-import com.dl.spring.io.ResourceLoader;
-import com.dl.spring.xml.XmlBeanDefinitionReader;
+import com.dl.spring.beans.BeanDefinition;
+import com.dl.spring.beans.factory.AbstractBeanFactory;
+import com.dl.spring.beans.factory.AutowireCapableBeanFactory;
+import com.dl.spring.beans.io.ResourceLoader;
+import com.dl.spring.beans.xml.XmlBeanDefinitionReader;
 import org.junit.Test;
 
 import java.util.Map;

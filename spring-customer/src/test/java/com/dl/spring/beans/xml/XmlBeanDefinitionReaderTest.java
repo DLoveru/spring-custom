@@ -1,7 +1,7 @@
-package com.dl.spring.xml;
+package com.dl.spring.beans.xml;
 
-import com.dl.spring.BeanDefinition;
-import com.dl.spring.io.ResourceLoader;
+import com.dl.spring.beans.BeanDefinition;
+import com.dl.spring.beans.io.ResourceLoader;
 import org.junit.Test;
 
 import java.util.Map;

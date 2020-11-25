@@ -1,10 +1,10 @@
 package com.dl.spring.context;
 
-import com.dl.spring.BeanDefinition;
-import com.dl.spring.factory.AbstractBeanFactory;
-import com.dl.spring.factory.AutowireCapableBeanFactory;
-import com.dl.spring.io.ResourceLoader;
-import com.dl.spring.xml.XmlBeanDefinitionReader;
+import com.dl.spring.beans.BeanDefinition;
+import com.dl.spring.beans.factory.AbstractBeanFactory;
+import com.dl.spring.beans.factory.AutowireCapableBeanFactory;
+import com.dl.spring.beans.io.ResourceLoader;
+import com.dl.spring.beans.xml.XmlBeanDefinitionReader;
 
 import java.util.Map;
 
@@ -29,6 +29,7 @@ public class ClassPathXmlApplicationContext extends AbstractApplicationContext {
 
     /**
      * 使用refresh方法来注册bean
+     *
      * @throws Exception
      */
     @Override

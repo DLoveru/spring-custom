@@ -1,6 +1,6 @@
-package com.dl.spring;
+package com.dl.spring.beans;
 
-import com.dl.spring.io.ResourceLoader;
+import com.dl.spring.beans.io.ResourceLoader;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
