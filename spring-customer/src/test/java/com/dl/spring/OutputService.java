@@ -17,4 +17,8 @@ public class OutputService {
     public void setHelloWorldService(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;
     }
+
+    public HelloWorldService getHelloWorldService() {
+        return helloWorldService;
+    }
 }
