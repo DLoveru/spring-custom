@@ -23,6 +23,11 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 
     @Override
     public Object getBean(String name) throws Exception{
+        /**
+         * ，我们使用lazy-init的方式，将createBean的事情放到`getBean`的时候才执行，
+         * 这样在注入bean的时候，如果该属性对应的bean找不到，那么就先创建
+         * 因为总是先创建后注入，所以不会存在两个循环依赖的bean创建死锁的问题。
+         */
         BeanDefinition beanDefinition = beanDefinitionMap.get(name);
         if (beanDefinition == null) {
             throw new IllegalArgumentException("No bean named " + name + " is defined");
@@ -38,7 +43,6 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @param name
      * @param beanDefinition
      */
-    @Override
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception {
         beanDefinitionMap.put(name, beanDefinition);
         beanDefinitionNames.add(name);

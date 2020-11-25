@@ -27,3 +27,4 @@ public class XmlBeanDefinitionReaderTest {
         System.out.println(registry.get("helloWorldService"));
     }
 }
+

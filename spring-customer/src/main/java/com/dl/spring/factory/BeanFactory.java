@@ -19,10 +19,4 @@ public interface BeanFactory {
      */
      Object getBean(String name) throws Exception;
 
-    /**
-     * 注册bean到beanDefinitionMap中
-     * @param name
-     * @param beanDefinition
-     */
-     void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception;
 }

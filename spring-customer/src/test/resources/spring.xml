@@ -13,9 +13,9 @@
         <property name="helloWorldService" ref="helloWorldService"></property>
     </bean>
     <!--为helloWorldService注入outputService -->
-    <bean name="helloWorldService" class="com.dl.spring.HelloWorldService">
-        <property name="name" value="Hello World!"></property>
-        <property name="outputService" ref="outputService"></property>
-    </bean>
+<!--    <bean name="helloWorldService" class="com.dl.spring.HelloWorldService">-->
+<!--        <property name="name" value="Hello World!"></property>-->
+<!--        <property name="outputService" ref="outputService"></property>-->
+<!--    </bean>-->
 
 </beans>
