@@ -2,6 +2,7 @@ package com.dl.spring.xml;
 
 import com.dl.spring.AbstractBeanDefinitionReader;
 import com.dl.spring.BeanDefinition;
+import com.dl.spring.BeanReference;
 import com.dl.spring.PropertyValue;
 import com.dl.spring.io.Resource;
 import com.dl.spring.io.ResourceLoader;
@@ -90,7 +91,23 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 Element propertyEle = (Element) node;
                 String name = propertyEle.getAttribute("name");
                 String value = propertyEle.getAttribute("value");
-                beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name,value));
+                /**
+                 * <bean name="helloWorldService" class="com.dl.spring.HelloWorldService">
+                 *         <property name="outputService" ref="outputService"></property>
+                 *     </bean>
+                 */
+                if (value != null && value.length() > 0) {
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                } else {
+                    String ref = propertyEle.getAttribute("ref");
+                    //ref为helloWorldService,outputService,可以看出，加载顺序从上到下。
+                    if (ref == null || ref.length() == 0) {
+                        throw new IllegalArgumentException("Configuration problem: <property> element for property '"
+                                + name + "' must specify a ref or value");
+                    }
+                    BeanReference beanReference = new BeanReference(ref);
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, beanReference));
+                }
             }
         }
     }

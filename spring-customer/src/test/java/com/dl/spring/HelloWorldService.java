@@ -12,11 +12,21 @@ public class HelloWorldService {
         return name;
     }
 
+    private OutputService outputService;
+
     public void setName(String name) {
         this.name = name;
     }
 
     public void helloWorld() {
         System.out.println(name);
+    }
+
+    public void setOutputService(OutputService outputService) {
+        this.outputService = outputService;
+    }
+
+    public OutputService getOutputService() {
+        return outputService;
     }
 }
