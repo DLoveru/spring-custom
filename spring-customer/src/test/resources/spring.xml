@@ -12,10 +12,10 @@
     <bean name="outputService" class="com.dl.spring.OutputService">
         <property name="helloWorldService" ref="helloWorldService"></property>
     </bean>
-    <!--为helloWorldService注入outputService -->
-<!--    <bean name="helloWorldService" class="com.dl.spring.HelloWorldService">-->
-<!--        <property name="name" value="Hello World!"></property>-->
-<!--        <property name="outputService" ref="outputService"></property>-->
-<!--    </bean>-->
+    为helloWorldService注入outputService
+    <bean name="helloWorldService" class="com.dl.spring.HelloWorldServiceImpl">
+        <property name="name" value="Hello World!"></property>
+        <property name="outputService" ref="outputService"></property>
+    </bean>
 
 </beans>
